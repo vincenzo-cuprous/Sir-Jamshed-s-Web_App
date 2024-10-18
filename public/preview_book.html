@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Preview - Jamshed Research Center</title>
+    <meta name="description" content="Preview and download Islamic books from Jamshed Research Center. Access a wide range of Islamic literature including The Quran, Sahih Al-Bukhari, and more.">
+    <meta name="keywords" content="Jamshed Research Center, Islamic book preview, Islamic book download, Quran, Sahih Al-Bukhari, Riyad as-Salihin">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .book-content {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jamshed Research Center - Book Preview</h1>
+        <nav>
+            <a href="index.html">Back to Book Gallery</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="bookTitle"></h2>
+        <img id="bookImage" src="" alt="Book Cover">
+        <div id="bookContent" class="book-content"></div>
+        <a id="downloadLink" href="#" class="download-button" download>Download PDF</a>
+    </main>
+    <footer>
+        <p>&copy; 2023 Jamshed Research Center. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookId = urlParams.get('id');
+
+        fetch(`/api/books/${bookId}`)
+            .then(response => response.json())
+            .then(book => {
+                document.title = `${book.title} - Jamshed Research Center`;
+                document.getElementById('bookTitle').textContent = book.title;
+                document.getElementById('bookImage').src = book.image;
+                document.getElementById('bookImage').alt = `${book.title} Cover`;
+                document.getElementById('bookContent').textContent = book.content || 'No preview available.';
+                document.getElementById('downloadLink').href = book.downloadLink;
+            })
+            .catch(error => console.error('Error fetching book:', error));
+    </script>
+</body>
+</html>
