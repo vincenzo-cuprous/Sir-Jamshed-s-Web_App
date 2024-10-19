@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home-style.css">
+    <script src="home_script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamshed Research</title>
+</head>
+<body>
+    <header>
+        <h1>Jamshed Research</h1>
+        <button class="nav-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="islamic.html">Research Content</a></li>
+                <li><a href="Edit_Books.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome To Our Website</h2>
+        <p>This website will provide you the best content based upon Islam.</p>
+
+        <section class="explore-section">
+            <h3>Explore Our Books</h3>
+            <a href="books.html" class="explore-button">Explore</a>
+        </section>
+
+        <section class="explore-section">
+            <h3>Explore Our Islamic Research</h3>
+            <a href="islamic.html" class="explore-button">Research</a>
+        </section>
+
+        <section class="explore-section">
+            <h3>Return Home</h3>
+            <button id="returnButton" class="explore-button">Return</button>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <input type="text" id="commentName" placeholder="Your Name" required>
+            <textarea id="commentText" placeholder="Your Comment" required></textarea>
+            <button type="submit">Submit Comment</button>
+        </form>
+        <div id="comments"></div>
+    </footer>
+</body>
+</html>

@@ -1,14 +1,31 @@
 {
-  "name": "server",
+  "name": "dynamic-book-gallery",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "functions/api.js",
   "scripts": {
-    "build": "node index.js"
+    "start": "netlify dev"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Jamshed Research Center",
+    "Jamshed Research",
+    "Islamic books",
+    "Quran",
+    "Sahih Al-Bukhari",
+    "Riyad as-Salihin",
+    "Download Books",
+    "Islamic Literature",
+    "The Quran",
+    "Sahih Al-Bukhari download",
+    "Riyad as-Salihin download",
+    "Islamic literature",
+    "Quran download",
+    "download jamshed research",
+    "jamshed research download",
+    "download book jamshed research"
+  ],
+  "author": "Jamshed Syede",
   "license": "ISC",
-  "description": "",
+  "description": "The Website Will Gives You The Best Content Based Upon Islam",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
@@ -16,6 +33,10 @@
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
-    "pg": "^8.13.0"
+    "pg": "^8.13.0",
+    "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^3.39.4"
   }
 }
