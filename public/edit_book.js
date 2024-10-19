@@ -305,3 +305,21 @@ function resetCommentForm() {
     editingCommentIndex = -1;
     addEditCommentButton.textContent = 'Add Comment';
 }
+// Save data to file
+function saveData() {
+    const data = {
+        books: books,
+        comments: comments,
+        adminCredentials: adminCredentials
+    };
+    fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
+}
+
+function updateEnvironmentVariable() {
+    const dataString = JSON.stringify({
+        books: data.books,
+        comments: data.comments,
+        adminCredentials: data.adminCredentials
+    });
+    // Update environment variable with new data
+}

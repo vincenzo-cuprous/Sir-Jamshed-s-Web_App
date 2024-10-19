@@ -4,16 +4,16 @@ function fetchBooks() {
         .then(books => {
             const bookGrid = document.getElementById('bookGrid');
             bookGrid.innerHTML = '';
-            books.forEach((book, index) => {
-                const bookCard = document.createElement('div');
-                bookCard.className = 'book-card';
-                bookCard.innerHTML = `
-                    <img src="${book.image}" alt="${book.title}">
-                    <h3>${book.title}</h3>
-                    <a href="${book.downloadLink}" target="_blank">Download</a>
-                    <a href="preview_book.html?id=${index}">Preview</a>
+            books.forEach(book => {
+                const bookItem = document.createElement('div');
+                bookItem.className = 'book-item';
+                bookItem.innerHTML = `
+                    <div class="book-image-container">
+                        <img src="${book.image}" alt="${book.title}" onclick="window.location.href='${book.downloadLink}'">
+                    </div>
+                    <p>${book.title}</p>
                 `;
-                bookGrid.appendChild(bookCard);
+                bookGrid.appendChild(bookItem);
             });
         })
         .catch(error => console.error('Error fetching books:', error));
