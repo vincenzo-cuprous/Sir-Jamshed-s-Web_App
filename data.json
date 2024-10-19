@@ -1,0 +1,27 @@
+{
+  "books": [
+    {
+      "title": "The Quran",
+      "image": "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
+      "downloadLink": "https://drive.google.com/file/d/1OpELNgClnL4gOex0aEsr3SILfCur_TH9/view?usp=drive_link",
+      "content": "didjhdhjdfhdfjhdfdf"
+    },
+    {
+      "title": "Book",
+      "image": "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
+      "downloadLink": "https://drive.google.com/file/d/1OpELNgClnL4gOex0aEsr3SILfCur_TH9/view?usp=drive_link",
+      "content": "New Book"
+    },
+    {
+      "title": "dfdfdf",
+      "image": "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
+      "downloadLink": "https://drive.google.com/file/d/1OpELNgClnL4gOex0aEsr3SILfCur_TH9/view?usp=drive_link",
+      "content": "dfdfdfff"
+    }
+  ],
+  "comments": [],
+  "adminCredentials": {
+    "username": "jamshed",
+    "password": "qw4HD123!@#"
+  }
+}
